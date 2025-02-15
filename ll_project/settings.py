@@ -55,6 +55,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'learning_logs',
     'accounts',
+    'waitress',
     'django_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -149,3 +150,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'learning_logs:index'
 LOGOUT_REDIRECT_URL = 'learning_logs:index'
 LOGIN_URL = 'accounts:login'
+WSGI_APPLICATION = 'waitress.server:call_in_application'
